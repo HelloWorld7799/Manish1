@@ -1,0 +1,34 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Conditional Rendering" icon-name="standard:account">
+        <lightning-input type="checkbox" label="CheckBox" onchange={changeHandler}></lightning-input>
+        <template if:true={showData}>
+            <div>I AM TRUE STATEMENT</div>
+        </template>
+       
+        <template if:false={showData}>
+            <div>I AM FALSE STATEMENT</div>
+        </template>
+    </lightning-card>
+    
+    <h1>*****************</h1>
+    <lightning-card  variant="Narrow"  title="ForEachLoop In LWC" icon-name="standard:account">
+        <h1>For Each Loop</h1>
+        <template for:each={cities} for:item=city>
+          <div key={city}>
+            <strong >{city}</strong>
+          </div> 
+        </template>
+    </lightning-card>
+
+    <h1>*****************</h1>
+    <lightning-card  variant="Narrow"  title="Iterator Loop In LWC" icon-name="standard:account">
+        <h1>For Each Loop</h1>
+        <template iterator:it={cities} >
+          <div key={it.value}>
+            <strong >{it.value}</strong>
+          </div> 
+        </template>
+    </lightning-card>
+
+
+</template>

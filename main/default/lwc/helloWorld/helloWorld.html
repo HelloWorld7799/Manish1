@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+       <div class="greet-class">Hello {dynamicGreeting}</div>
+       <div style="color: rgb(20, 20, 20); background: #00ff1a;">Inline CSS Styling</div>
+
+       <div>Genral Tag</div>
+
+       <lightning-input label="Greeting"  onchange={greetHandler}></lightning-input>
+    </lightning-card>
+</template>
